@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Submit Book Pictures Website</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
+    <script src="https://unpkg.com/vue-silentbox@2.3.1/dist/vue-silentbox.min.js"></script>
+  </head>
+
+  <body>
+    <header class="App-header">
+      <img src="./logo.svg" class="App-logo" alt="logo" />
+    </header>
+    <div id="app">
+      <h2>{{callToAction}}</h2>
+
+      <!-- Using Silentbox - a lightweight component for Vue.js to display the images in the browser -->
+      <silent-box :gallery="gallery"></silent-box>
+    </div>
+
+    <script>
+      Vue.use(VueSilentbox.default);
+      const app = new Vue({
+        /* $el returns the HTML element to mount the Vue instance. */
+        el: "#app",
+        data() {
+          return {
+            callToAction: "Submit Pictures of Your Favourite Books",
+            gallery: [],
+          };
+        },
+        methods: {
+          async loadImages() {
+            // TODO: Use the Messaging API to use submitted photos
+            // const response = await fetch("/api/")
+            // TODO: Create a web-based API that matches this expected response
+            this.gallery = [
+              {
+                src: "/images/im-judging-you.jpg",
+                description: "I'm Judging You by Luvvie",
+                alt: "Book Cover of I'm Judging You by Luvvie",
+                thumbnailWidth: "150px",
+              },
+            ];
+          },
+        },
+        mounted() {
+          this.loadImages();
+        },
+      });
+    </script>
+  </body>
 </html>

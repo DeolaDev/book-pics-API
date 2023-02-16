@@ -2,5 +2,6 @@
 
 Framework used is Vue.js and it's APIs. 
 
-Used a server side API to feed the application, and manipulate data from a public Web API.
+A server side API is used to feed the application, and manipulate data from a public Web API.
 
+**Tutorial by <a href="https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md">Craig Dennis</a>
