@@ -10,6 +10,6 @@ APIs used:
 - Twilo Messaging API (to get the data from all incoming messages)
 - Designed a web based API to parse the data and return the expected JSON format
 
-\*\* Hosted with Netlify -> https://main--book-pics.netlify.app/
+\*\* Hosted with Netlify -> https://book-pics.netlify.app/
 
 \*\*Tutorial by <a href="https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md">Craig Dennis</a>
