@@ -38,13 +38,17 @@
         methods: {
           async loadImages() {
             // Fetch data from the book-pics server side API
-            const response = await fetch(
-              "https://world-of-books-4644.twil.io/api/book-pics"
-            );
+
+            try {
+              const response = await fetch(
+                "https://world-of-books-4644.twil.io/api/book-pics"
+              );
+              this.gallery = await response.json();
+            } catch (error) {
+              console.log(error);
+            }
 
             // TODO: Create a web-based API that matches this expected response
-
-            this.gallery = await response.json();
           },
         },
         mounted() {
