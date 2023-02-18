@@ -1,11 +1,15 @@
 # A single page 'Book Pictures' application + API
 
+Users can send a text with a picture of their favourite book and have it displayed on the webpage.
+
 Framework used: Vue.js
-APIs used: Vue API to retrieve, Twilo Messaging API (to get all messages received), designed a web based API to return the expected format 
-A server side API is used to feed the application, and manipulate data from a public Web API.
 
-web based API to return the expected JSON format
+APIs used:
 
-** Hosted with Netlify
+- Vue API to render the images
+- Twilo Messaging API (to get the data from all incoming messages)
+- Designed a web based API to parse the data and return the expected JSON format
 
-**Tutorial by <a href="https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md">Craig Dennis</a>
+\*\* Hosted with Netlify -> https://main--book-pics.netlify.app/
+
+\*\*Tutorial by <a href="https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md">Craig Dennis</a>
