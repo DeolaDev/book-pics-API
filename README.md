@@ -1,6 +1,6 @@
 # A single page 'Book Pictures' application + API
 
-Users can send a text with a picture of their favourite book and have it displayed on the webpage.
+Users can send a text to my TWILIO number with a picture of their favourite book and have it displayed on the webpage.
 
 Framework used: Vue.js
 
