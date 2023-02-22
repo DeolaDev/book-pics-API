@@ -19,6 +19,7 @@
     </header>
     <div id="app">
       <h2>{{callToAction}}</h2>
+      <h3>{{callToAction2}}</h3>
 
       <!-- Using Silentbox - a lightweight component for Vue.js to display the images in the browser -->
       <silent-box :gallery="gallery"></silent-box>
@@ -33,6 +34,8 @@
           return {
             callToAction: "Discover Your New Favourite Books",
             gallery: [],
+            callToAction2:
+              "Images are received by text from users are processed by my serverside API which returns the Url, description etc in Json format to my frontend to be displayed",
           };
         },
         methods: {
