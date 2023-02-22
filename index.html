@@ -50,6 +50,27 @@
           },
         },
         mounted() {
+          const API_ENDPOINT = "<YOUR WEBSOCKET API ENDPOINT>";
+          const connection = new WebSocket(
+            `${API_ENDPOINT}/<YOUR WEBSOCKET ROUTE>`
+          );
+
+          connection.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            console.log(data.message); // new data available
+          };
+
+          connection.onerror = (error) => {
+            console.log(`WebSocket error: ${error}`);
+          };
+
+          connection.onopen = (event) => {
+            console.log("WebSocket connection established");
+          };
+
+          connection.onclose = (event) => {
+            console.log("WebSocket connection closed");
+          };
           //setInterval(() => {
           this.loadImages();
           //}, 1000);
