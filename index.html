@@ -50,14 +50,14 @@
           },
         },
         mounted() {
-          const API_ENDPOINT = "<YOUR WEBSOCKET API ENDPOINT>";
-          const connection = new WebSocket(
-            `${API_ENDPOINT}/<YOUR WEBSOCKET ROUTE>`
-          );
+          const API_ENDPOINT =
+            "wss://vvy897ucyf.execute-api.ca-central-1.amazonaws.com/production/";
+          const connection = new WebSocket(`${API_ENDPOINT}`);
 
           connection.onmessage = (event) => {
             const data = JSON.parse(event.data);
             console.log(data.message); // new data available
+            console.log("howdy do");
           };
 
           connection.onerror = (error) => {
@@ -66,6 +66,7 @@
 
           connection.onopen = (event) => {
             console.log("WebSocket connection established");
+            console.log("howdy do 2");
           };
 
           connection.onclose = (event) => {
